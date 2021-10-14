@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+<h1>Titolo</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h5>Table of Contents</h5>
+<ol>
+    <li><a href="#built">Built With</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#considerations">Considerations</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ol>
 
-## Available Scripts
+<h3 id="built">Built With</h3>
+<ul>
+    <li><a href="https://www.npmjs.com/package/axios">Axios</a> per la get request della rest API</li>
+    <li><a href="https://reactrouter.com/">React Router</a> per impostare il routing delle varie pagine</li>
+    <li><a href="https://react-icons.github.io/react-icons/">React Icons</a> per l'icona nel convertitore</li>
+</ul>
 
-In the project directory, you can run:
+<h3 id="usage">Usage</h3>
+<p>L'uso è abbastanza semplice: nella home page si trova il convertitore, nel quale una volta inserito l'ammontare da convertire basta sceglie una delle valute disponibile nel menù, una volta cliccato sul tasto, e dopo aver selezionato la valuta desiderata apparirà a schermo il risultato</p>
 
-### `npm start`
+<p>Il form nella pagina contatti, come da richiesta, mostra i dati dei vari input compilati in console sotto forma di oggetto, e in aggiunta grazie a hookbin invia una richiesta post alla loro api e poi dal sito è possibile vedere il body del form: https://hookbin.com/E7Z8NzljbKIVjY66jjp3 </p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 id="considerations">Considerations</h3>
+<p>Questo è stato un esercizio molto interessante e di valore per me; sebbene a posteriori può sembrare semplice, ammetto che ho avuta alcuni intoppi nell'implementazione della logica, ma rimunginandoci un po' sopra e informandomi sono riuscito a superarli. <br />
+Il convertitore funziona solo da Euro a una qualsiasi valuta e non al contrario perchè con la chiave gratuita dell'API non è possibile cambiare la base del convertitore. <br />
+Ovviamente uno step ulteriore sarebbe implementare un tipo di controllo per l'input del numero, per fare in modo che non si possano inserire numeri negativi o testi e sarebbe giusto anche formattare i numeri e arrotondarli a 2 cifre dopo la virgola. 
+Il motivo per cui non ho fatto ciò, oltre al tempo, è che non mi sentirei a mio agio ad andare a cercare e inserire algoritmi da internet che non sono miei.
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h3 id="contact">Contact</h3>
+<p>Markiyan Kmit - business.kmit@gmail.com</p>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>Project Link: https://github.com/mark1yan0/test-doubleyou</p>

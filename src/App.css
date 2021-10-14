@@ -1,38 +1,350 @@
-.App {
-  text-align: center;
+:root {
+  --main-color: rgb(33, 33, 77);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* typography */
+h1,
+h3 p,
+input,
+textarea,
+a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+input,
+label,
+textarea {
+  font-size: 1.2rem;
+}
+
+a,
+a:visited {
+  text-decoration: none !important;
+  color: black;
+}
+
+/* HomePage */
+.converter {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1em;
+}
+
+.converter .converter-base {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 1em 0;
+}
+
+.converter-base input,
+.date {
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: rgb(156, 156, 156);
+  transition: all 0.3s linear;
+}
+
+.converter-base input:focus {
+  color: var(--main-color);
+  outline: none;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.base-currency {
+  font-size: 2rem;
+}
+
+.select-currency {
+  display: flex;
+  align-items: center;
+}
+
+#currencies {
+  appearance: none;
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
   color: white;
+  background: var(--main-color);
+  margin: 0.5em;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#currencies:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#currencies option {
+  padding: 1em 5em 1em 1em;
+}
+
+.converted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.converted-amount-input {
+  font-size: 2rem;
+}
+
+.converted strong {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.converted-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding-top: 10px;
+}
+
+/* About */
+.page-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 1em 0;
+}
+
+.about-content img {
+  width: 50%;
+}
+
+.about-content div {
+  z-index: 1;
+}
+
+.about-content p {
+  background: rgba(33, 33, 77, 0.692);
+  color: white;
+  padding: 1.5em;
+  margin-right: -5em;
+  font-size: 1.5rem;
+}
+
+.about-content-reverse p {
+  margin-right: 0;
+  margin-left: -5em;
+}
+
+/* Contacts */
+/* form */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.form .contact-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form .contact-info label {
+  flex: 1;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form textarea {
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
+input[type='submit'] {
+  background: var(--main-color);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Header */
+.nav-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links-container {
+  display: flex;
+}
+
+.nav-links-container li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+/* Hero */
+.hero-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container h1 {
+  text-align: center;
+}
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(https://images.unsplash.com/photo-1510917203414-2e642e75d3ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80)
+      no-repeat center;
+  background-size: cover;
+}
+
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)
+      no-repeat center;
+  background-size: cover;
+}
+
+.contacts {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)
+      no-repeat center;
+  background-size: cover;
+}
+
+.hero-title {
+  color: white;
+  font-size: 3rem;
+}
+/* Footer */
+.footer-container {
+  width: 100%;
+  min-height: 10vh;
+  background: var(--main-color);
+  color: white;
+  padding: 2em;
+}
+
+.footer-container ul li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* home page - converter*/
+  .converter-base {
+    width: 90%;
+  }
+
+  .converter-base input {
+    width: 60%;
+  }
+
+  .converted {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* about */
+
+  .about-content {
+    width: 90%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 1em 0;
+  }
+
+  .about-content img {
+    height: 100%;
+    width: 100%;
+    order: 1;
+    object-fit: cover;
+  }
+
+  .about-content div {
+    background: rgba(33, 33, 77, 0.692);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .about-content p {
+    background: none;
+    width: 100%;
+    color: white;
+
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-content-reverse p {
+    margin-left: 0;
+  }
+
+  /* contacts */
+  .form {
+    width: 90%;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* footer */
+  .footer-container h2 {
+    text-align: center;
+  }
+
+  .footer-container ul li {
+    text-align: center;
   }
 }
